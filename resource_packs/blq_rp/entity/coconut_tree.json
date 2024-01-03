@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "blq:coconut_tree",
+            "materials": {
+                "default":"entity"
+            },
+            "textures": {
+                "default":"textures/entity/coconut_tree"},
+            "geometry": {
+                "default":"geometry.tree"
+            },
+            "render_controllers":[
+          "controller.render.default"],
+
+            "scripts": {},
+
+
+            "enable_attachables": false,
+            "hide_armor": false
+        }
+    }
+}

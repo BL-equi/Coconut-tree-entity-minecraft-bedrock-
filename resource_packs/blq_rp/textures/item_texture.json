@@ -1,0 +1,12 @@
+{
+	"resource_pack_name": "blq",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"coconut":{
+			"textures": "textures/items/coconut"
+		},
+		"gem": {
+			"textures": "textures/items/gem"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "blq:coconut",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:icon": "coconut",
+			"minecraft:render_offsets": "apple"
+		}
+	}
+}

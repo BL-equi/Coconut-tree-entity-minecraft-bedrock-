@@ -1,0 +1,82 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "blq:coconut_tree",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "component_groups": {
+            "hit_the_tree":{
+                "minecraft:damage_sensor":{
+                    "triggers": [
+                        {
+                            "cause": "all",
+                            "deals_damage": false,
+                        "on_damage": {
+                            "target": "self",
+                            "event": "coconut"
+                        }
+                        }
+                    ]
+                }
+            },
+            "coconut_drop":{
+                "minecraft:spawn_entity": {
+                    "entities":[{
+                    "spawn_entity":"",
+                    "max_wait_time":0,
+                    "min_wait_time":0,
+                    "single_use": true,
+                    "num_to_spawn":1,
+                    "spawn_item":"blq:coconut"
+                }]
+                }
+            }
+            
+        },
+        "components": {
+            "minecraft:type_family":{
+                "family":["armor_stand"]
+            },
+            "minecraft:collision_box":{
+                "width":1,
+                "height":2
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                    ]
+                        
+                    },
+            "minecraft:timer": {
+                "time": 60,
+                "looping": true,
+                "time_down_event": {
+                    "event": "add_hit_tree",
+                    "target": "self"
+                }
+            }
+        },
+
+        "events": {
+            "coconut":{
+                "add":{
+                    "component_groups": [
+                        "coconut_drop"
+                    ]
+                }
+            },
+            "add_hit_tree":{
+                "add":{
+                    "component_groups": [
+                        "hit_the_tree"
+                    ]
+                }
+            }
+        }
+    }
+}
